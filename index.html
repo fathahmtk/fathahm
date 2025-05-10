@@ -7,24 +7,36 @@
     <meta name="description" content="Offering professional accounting services for businesses in Doha, including WPS payroll, financial reporting, and trade finance solutions.">
     <meta name="keywords" content="accountant, freelancer, WPS payroll, trade finance, ERP, financial analyst, Doha, Qatar">
     <link rel="canonical" href="http://abdulfathahmtk.website3.me" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
     <style>
+        /* Color Palette Refinement */
         :root {
-            --primary: #2c3e50;
-            --secondary: #d4af37;
-            --light: #f8f9fa;
-            --dark: #212529;
-            --accent: #a67c00;
-            --hover-color: #d35400;
+            --primary: #2c3e50; /* Dark Slate Gray */
+            --secondary: #cda434; /* Slightly richer gold */
+            --light: #f8f9fa; /* Very light gray */
+            --dark: #212529; /* Dark almost black */
+            --accent: #a67c00; /* Gold */
+            --hover-color: #e67e22; /* A warmer hover color (e.g., Carrot Orange) */
         }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f5f5f5;
+            /* Using a subtle gradient background */
+            font-family: 'Roboto', sans-serif; /* Using the imported font */
+            background: linear-gradient(180deg, #f5f5f5 0%, #e0e0e0 100%); /* A light grey gradient */
+            background-attachment: fixed; /* Keeps the background still when scrolling */
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            color: var(--dark); /* Default text color */
         }
+
         header {
-            background: linear-gradient(135deg, var(--primary), #1a2b3c);
+            /* Enhanced header background with a subtle gradient overlay */
+            background: linear-gradient(135deg, rgba(44, 62, 80, 0.95), rgba(26, 43, 60, 0.95)); /* Dark gradient overlay */
+            /* You could add a background image here if desired, e.g., url('your-professional-background-image.jpg') */
+            background-size: cover;
+            background-position: center;
             color: white;
             padding: 5rem 2rem;
             text-align: center;
@@ -32,7 +44,9 @@
             border-radius: 0 0 10px 10px;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Added shadow to header */
         }
+
         .profile-img {
             width: 150px;
             height: 150px;
@@ -42,22 +56,40 @@
             margin: 0 auto 1.5rem;
             display: block;
             animation: fadeIn 1s ease-in-out;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Added shadow to profile image */
         }
+
         h1 {
-            font-size: 2.5rem;
+            font-family: 'Roboto', sans-serif;
+            font-size: 2.8rem; /* Slightly larger heading */
             margin-bottom: 0.5rem;
+            font-weight: 700; /* Bold heading */
         }
+
         h2 {
+            font-family: 'Roboto', sans-serif;
             color: var(--primary);
             border-bottom: 2px solid var(--secondary);
             padding-bottom: 0.5rem;
             margin-top: 2rem;
+            font-weight: 700; /* Bold heading */
+            font-size: 2rem; /* Slightly larger heading */
         }
+
+         h3 {
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 1rem;
+            font-size: 1.6rem; /* Slightly larger heading */
+            color: var(--primary);
+            font-weight: 700; /* Bold heading */
+        }
+
         .tagline {
-            font-size: 1.2rem;
-            margin: 0.5rem 0;
+            font-size: 1.3rem; /* Slightly larger tagline */
+            margin: 0.5rem 0 1.5rem 0; /* Adjusted margin */
             color: rgba(255,255,255,0.9);
         }
+
         .contact-info {
             display: flex;
             justify-content: center;
@@ -65,46 +97,71 @@
             flex-wrap: wrap;
             margin-top: 2rem;
         }
+
         .contact-item {
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            font-weight: 600;
+            font-weight: 500; /* Slightly less bold */
             color: white;
             text-decoration: none;
+            transition: color 0.3s ease; /* Smooth transition */
         }
+
         .contact-item:hover {
             color: var(--hover-color);
         }
+
         section {
             background: white;
             padding: 3rem;
-            margin-bottom: 3rem;
+            margin: 0 auto 3rem auto; /* Center sections and add bottom margin */
+            max-width: 960px; /* Limit section width for readability */
             border-radius: 10px;
-            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); /* Softer shadow */
         }
+
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 2rem;
             margin-top: 1.5rem;
         }
+
         .service-card {
             background: var(--light);
             padding: 2rem;
             border-radius: 10px;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Softer shadow */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            transform: translateY(-7px); /* Slightly more lift on hover */
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12); /* More pronounced hover shadow */
         }
-        .service-card h3 {
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-            color: var(--primary);
+
+        .service-card ul {
+            list-style: none; /* Remove default list style */
+            padding: 0;
+            margin-top: 1rem;
         }
+
+        .service-card li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+
+        .service-card li::before {
+            content: '✓'; /* Add a checkmark icon */
+            color: var(--secondary);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+
         .badge {
             display: inline-block;
             padding: 0.35rem 1rem;
@@ -112,25 +169,96 @@
             font-size: 0.85rem;
             font-weight: 600;
             margin-right: 0.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem; /* Adjusted margin */
             background-color: var(--secondary);
             color: var(--primary);
+            white-space: nowrap; /* Prevent wrapping */
         }
+
+        /* General Button Styling (for the .btn class in HTML) */
         .btn {
             display: inline-block;
             background: var(--secondary);
             color: var(--primary);
-            padding: 1rem 2rem;
+            padding: 1rem 2.5rem; /* Slightly wider button */
             border-radius: 30px;
             text-decoration: none;
             font-weight: 600;
-            margin-top: 1rem;
-            transition: background 0.3s ease, color 0.3s ease;
+            transition: background 0.3s ease, color 0.3s ease, transform 0.1s ease; /* Added transform transition */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+            border: none; /* Ensure no default button border */
+            cursor: pointer; /* Indicate clickable */
         }
+
         .btn:hover {
             background: var(--hover-color);
             color: white;
+            transform: translateY(-2px); /* Slight lift on hover */
         }
+
+         .btn:active {
+            transform: translateY(0); /* Press down effect */
+         }
+
+
+        /* Contact Section Specific Form Styling */
+        #contact form { /* Use #contact to target only this form */
+            max-width: 600px;
+            margin: 2rem auto 0 auto; /* Centers and adds space above */
+            padding: 2rem; /* Added padding to the form itself */
+            background: var(--light); /* Light background for the form area */
+            border-radius: 8px; /* Rounded corners for the form */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Shadow for the form */
+
+            display: grid; /* Use grid for layout */
+            gap: 1.5rem; /* Space between form elements */
+        }
+
+        /* Form Field Styling (using #contact and box-sizing) */
+        #contact input[type="text"],
+        #contact input[type="email"],
+        #contact input[type="tel"],
+        #contact textarea {
+            width: 100%; /* Full width of the grid item */
+            padding: 1rem; /* Padding inside fields */
+            border: 1px solid #ccc; /* Subtle border */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 1rem;
+            font-family: inherit;
+            box-sizing: border-box; /* Include padding and border in the element's total width */
+        }
+
+        #contact textarea {
+            height: 150px; /* Adjust height */
+            resize: vertical; /* Allow only vertical resizing */
+        }
+
+        /* Style for input focus */
+        #contact input:focus,
+        #contact textarea:focus {
+            outline: none; /* Remove default outline */
+            border-color: var(--secondary); /* Highlight border on focus */
+            box-shadow: 0 0 8px rgba(205, 164, 52, 0.4); /* Add a glow effect on focus using secondary color */
+        }
+
+        /* Label Styling for Contact Form */
+        #contact label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+
+        /* Button Styling within Contact Form (inherits from .btn) */
+        #contact button[type="submit"] { /* Target the submit button specifically */
+            /* Inherits styles from the general .btn rule */
+            width: auto; /* Allow button width to be determined by content */
+            justify-self: center; /* Center the button within the grid column */
+            margin-top: 0.5rem; /* Adjust top margin if needed */
+        }
+
+
         footer {
             text-align: center;
             padding: 2rem;
@@ -139,15 +267,68 @@
             border-radius: 10px 10px 0 0;
             margin-top: 3rem;
         }
-        @media (max-width: 768px) {
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            .contact-item {
-                text-align: center;
-                margin-bottom: 1rem;
-            }
+
+        footer p {
+            margin: 0.5rem 0;
         }
+
+
+        /* Responsive Design for smaller screens */
+        @media (max-width: 768px) {
+            header {
+                 padding: 4rem 1.5rem; /* Adjust header padding on mobile */
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.7rem;
+            }
+
+            h3 {
+                font-size: 1.4rem;
+            }
+
+            .tagline {
+                font-size: 1.1rem;
+            }
+
+            section {
+                padding: 2rem 1.5rem; /* Adjust section padding on mobile */
+                margin: 0 auto 2rem auto; /* Adjust section margin on mobile */
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr; /* Stack service cards on mobile */
+                gap: 1.5rem; /* Reduce gap on mobile */
+            }
+
+            .service-card {
+                padding: 1.5rem; /* Adjust card padding on mobile */
+            }
+
+            .badge {
+                 margin-right: 0.3rem;
+                 margin-bottom: 0.3rem;
+                 font-size: 0.8rem;
+            }
+
+            #contact form {
+                 padding: 1.5rem; /* Adjust form padding on mobile */
+                 gap: 1rem; /* Reduce gap on mobile */
+            }
+
+            #contact input[type="text"],
+            #contact input[type="email"],
+            #contact input[type="tel"],
+            #contact textarea {
+                 padding: 0.8rem; /* Adjust input padding on mobile */
+            }
+
+        }
+
         @keyframes fadeIn {
             0% { opacity: 0; }
             100% { opacity: 1; }
@@ -157,8 +338,8 @@
 <body>
 
     <header>
-        <img src="https://media.licdn.com/dms/image/v2/D4D03AQGD2Mzf8tMv_Q/profile-displayphoto-shrink_400_400/B4DZZ5T8PZGgAk-/0/1745791994024?e=1752105600&v=beta&t=IGeHPvVOioRBcKRaia_9hl47CA8PlqxaCVRQPN3cSqE" 
-             alt="Abdul Fathah Professional Photo" 
+        <img src="https://media.licdn.com/dms/image/v2/D4D03AQGD2Mzf8tMv_Q/profile-displayphoto-shrink_400_400/B4DZZ5T8PZGgAk-/0/1745791994024?e=1752105600&v=beta&t=IGeHPvVOioRBcKRaia_9hl47CA8PlqxaCVRQPN3cSqE"
+             alt="Abdul Fathah Professional Photo"
              class="profile-img">
         <h1>Abdul Fathah</h1>
         <p class="tagline">Freelance Accountant & Financial Analyst | Doha, Qatar</p>
@@ -170,20 +351,36 @@
     </header>
 
     <section id="about">
-        <h2>Professional Accounting Services in Qatar</h2>
-        <p>With 6+ years of specialized experience in Qatar's F&B, medical, and trading sectors, I provide comprehensive freelance accounting services that combine local market knowledge with technical expertise. My services are designed to help businesses maintain financial health while complying with Qatar's regulatory requirements.</p>
-        
+        <h2>About My Professional Journey</h2>
+        <p>With over 6 years of progressive experience, I am an accomplished Accountant and Financial Analyst specializing in the dynamic F&B, Medical, and Trading sectors here in Qatar. My experience includes working with a variety of businesses, including small-scale operations like caterias and groceries.</p>
+
+        <p>My career has been focused on providing robust financial management and strategic insights to businesses, ensuring both financial health and strict compliance with local regulations.</p>
+
+        <p>During my tenure at CAN International in Doha (Mar 2019 - Mar 2025), I managed the full accounting cycle, oversaw WPS payroll processing including SIF file preparation, and prepared comprehensive financial reports for internal management and audits. I also directed trade finance activities involving Tender Bonds, Letters of Guarantee (LGs), and Performance Guarantees through local banks, maintained fixed asset registers, and actively worked to improve cash flow through effective collection strategies.</p>
+
+        <p>Prior to this, I gained foundational experience as an Assistant Accountant at Huda Furni Mall in Kerala, India (Jan 2018 - Jan 2019), where I handled daily entries, managed vendor and customer accounts, supported month-end closings, and assisted with tax filing.</p>
+
+        <p>I am currently enhancing my qualifications by pursuing the **CMA USA** certification with the Institute of Management Accountants (IMA) since June 2024. I also hold a **VIBES Professional Course** certification from Sree Sankaracharya Computer Centre (Jan 2017 - Jan 2018) and a **B. Com** degree from the University of Calicut (Jul 2013 - Dec 2016).</p>
+
+        <p>My dedication and performance were recognized with the **Emerging Performer Award** at CAN International in 2021.</p>
+
+        <p>My core competencies include Full-Cycle Accounting, Financial Reporting & Auditing, Accounts Payable & Receivable, WPS Payroll Management, Bank Reconciliations, Budgeting & Forecasting, Trade Finance, Asset & Inventory Management, ERP Software & Microsoft Excel proficiency, Cash Flow Management, Documentation & Administrative Support, and Compliance & Internal Controls.</p>
+
+
         <div>
             <span class="badge">✅ Available for projects</span>
             <span class="badge">💼 WPS Payroll Specialist</span>
             <span class="badge">📊 Financial Reporting</span>
+             <span class="badge">🎓 CMA USA (In Progress)</span>
+             <span class="badge">🏆 Award Winner</span>
         </div>
     </section>
 
     <section id="services">
         <h2>Specialized Services</h2>
+        <p>As a freelance Accountant and Financial Analyst based in Doha, Qatar, I offer a range of specialized services designed to meet the unique needs of businesses operating in the local market.</p>
         <p>Tailored solutions for Qatar-based businesses and entrepreneurs:</p>
-        
+
         <div class="services-grid">
             <div class="service-card">
                 <h3>📚 Accounting Services</h3>
@@ -195,7 +392,7 @@
                 </ul>
                 <span class="badge">Qatar VAT Compliance</span>
             </div>
-            
+
             <div class="service-card">
                 <h3>💼 WPS Payroll</h3>
                 <ul>
@@ -205,7 +402,7 @@
                 </ul>
                 <span class="badge">Qatar Labor Law</span>
             </div>
-            
+
             <div class="service-card">
                 <h3>📊 Financial Reporting</h3>
                 <ul>
@@ -215,7 +412,7 @@
                 </ul>
                 <span class="badge">SME Specialized</span>
             </div>
-            
+
             <div class="service-card">
                 <h3>🏦 Trade Finance</h3>
                 <ul>
@@ -226,16 +423,46 @@
                 </ul>
                 <span class="badge">QCB Regulations</span>
             </div>
+
+             <div class="service-card">
+                <h3>🏦 Bank Services</h3>
+                <ul>
+                    <li>Assistance with opening bank accounts</li>
+                    <li>Support for online transactions</li>
+                    <li>Cheque preparation and management</li>
+                    <li>Documentation handling for banking</li>
+                </ul>
+                <span class="badge">Banking Support</span>
+            </div>
+
+            <div class="service-card">
+                <h3>📄 PRO Services Support</h3>
+                <ul>
+                    <li>Coordination for document renewal</li>
+                    <li>Assistance with employee records</li>
+                    <li>General administrative documentation</li>
+                </ul>
+                 <span class="badge">Corporate Services</span>
+            </div>
+
         </div>
     </section>
 
     <section id="contact">
         <h2>Contact Me</h2>
         <form action="https://formspree.io/f/your-form-id" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <input type="tel" name="phone" placeholder="Phone Number">
-            <textarea name="message" placeholder="How can I help you?" rows="5" required></textarea>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+
+            <label for="message">How can I help you?</label>
+            <textarea id="message" name="message" placeholder="How can I help you?" rows="5" required></textarea>
+
             <button type="submit" class="btn">Send Message</button>
         </form>
     </section>

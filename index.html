@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdul Fathah | Professional Accountant in Doha, Qatar</title>
-    <meta name="description" content="Qatar-based accounting specialist offering WPS payroll, financial reporting, and trade finance services for SMEs in Doha.">
+    <title>Abdul Fathah | Freelance Accountant & Financial Analyst | Doha, Qatar</title>
+    <meta name="description" content="Offering professional accounting services for businesses in Doha, including WPS payroll, financial reporting, and trade finance solutions.">
+    <meta name="keywords" content="accountant, freelancer, WPS payroll, trade finance, ERP, financial analyst, Doha, Qatar">
     <link rel="canonical" href="http://abdulfathahmtk.website3.me" />
     <style>
         :root {
@@ -13,23 +14,24 @@
             --light: #f8f9fa;
             --dark: #212529;
             --accent: #a67c00;
+            --hover-color: #d35400;
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
             background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
         }
         header {
             background: linear-gradient(135deg, var(--primary), #1a2b3c);
             color: white;
-            padding: 3rem 2rem;
+            padding: 5rem 2rem;
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             border-radius: 0 0 10px 10px;
+            position: relative;
+            overflow: hidden;
         }
         .profile-img {
             width: 150px;
@@ -37,12 +39,13 @@
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid var(--secondary);
-            margin: 0 auto 1rem;
+            margin: 0 auto 1.5rem;
             display: block;
+            animation: fadeIn 1s ease-in-out;
         }
         h1 {
-            margin: 0;
-            font-size: 2.3rem;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
         }
         h2 {
             color: var(--primary);
@@ -50,13 +53,9 @@
             padding-bottom: 0.5rem;
             margin-top: 2rem;
         }
-        h3 {
-            color: var(--primary);
-            margin-top: 0;
-        }
         .tagline {
             font-size: 1.2rem;
-            margin: 0.5rem 0 1rem;
+            margin: 0.5rem 0;
             color: rgba(255,255,255,0.9);
         }
         .contact-info {
@@ -64,38 +63,47 @@
             justify-content: center;
             gap: 1.5rem;
             flex-wrap: wrap;
-            margin-top: 1.5rem;
+            margin-top: 2rem;
         }
         .contact-item {
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            font-weight: 600;
             color: white;
             text-decoration: none;
         }
+        .contact-item:hover {
+            color: var(--hover-color);
+        }
         section {
             background: white;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 3rem;
+            margin-bottom: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
         }
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.5rem;
+            gap: 2rem;
             margin-top: 1.5rem;
         }
         .service-card {
             background: var(--light);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--secondary);
-            transition: transform 0.3s ease;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+        }
+        .service-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: var(--primary);
         }
         .badge {
             display: inline-block;
@@ -104,38 +112,24 @@
             font-size: 0.85rem;
             font-weight: 600;
             margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-        .badge-primary {
-            background: var(--secondary);
+            margin-bottom: 1rem;
+            background-color: var(--secondary);
             color: var(--primary);
         }
         .btn {
             display: inline-block;
             background: var(--secondary);
             color: var(--primary);
-            padding: 0.7rem 1.5rem;
+            padding: 1rem 2rem;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 600;
             margin-top: 1rem;
-            transition: all 0.3s ease;
+            transition: background 0.3s ease, color 0.3s ease;
         }
         .btn:hover {
-            background: var(--accent);
+            background: var(--hover-color);
             color: white;
-        }
-        form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 0.8rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-family: inherit;
         }
         footer {
             text-align: center;
@@ -149,18 +143,23 @@
             .services-grid {
                 grid-template-columns: 1fr;
             }
-            h1 {
-                font-size: 1.8rem;
+            .contact-item {
+                text-align: center;
+                margin-bottom: 1rem;
             }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
         }
     </style>
 </head>
 <body>
+
     <header>
         <img src="https://media.licdn.com/dms/image/v2/D4D03AQGD2Mzf8tMv_Q/profile-displayphoto-shrink_400_400/B4DZZ5T8PZGgAk-/0/1745791994024?e=1752105600&v=beta&t=IGeHPvVOioRBcKRaia_9hl47CA8PlqxaCVRQPN3cSqE" 
              alt="Abdul Fathah Professional Photo" 
-             class="profile-img"
-             loading="lazy">
+             class="profile-img">
         <h1>Abdul Fathah</h1>
         <p class="tagline">Freelance Accountant & Financial Analyst | Doha, Qatar</p>
         <div class="contact-info">
@@ -174,10 +173,10 @@
         <h2>Professional Accounting Services in Qatar</h2>
         <p>With 6+ years of specialized experience in Qatar's F&B, medical, and trading sectors, I provide comprehensive freelance accounting services that combine local market knowledge with technical expertise. My services are designed to help businesses maintain financial health while complying with Qatar's regulatory requirements.</p>
         
-        <div style="margin-top: 1.5rem;">
-            <span class="badge badge-primary">✅ Available for projects</span>
-            <span class="badge badge-primary">💼 WPS Payroll Specialist</span>
-            <span class="badge badge-primary">📊 Financial Reporting</span>
+        <div>
+            <span class="badge">✅ Available for projects</span>
+            <span class="badge">💼 WPS Payroll Specialist</span>
+            <span class="badge">📊 Financial Reporting</span>
         </div>
     </section>
 
@@ -190,12 +189,11 @@
                 <h3>📚 Accounting Services</h3>
                 <ul>
                     <li>Full-cycle accounting</li>
-                    <li>Daily bookkeeping</li>
-                    <li>MS Office expertise (Advanced Excel)</li>
                     <li>ERP system management</li>
                     <li>POS integration and management</li>
+                    <li>Tax filing and audit preparation</li>
                 </ul>
-                <span class="badge badge-primary">Qatar VAT Compliance</span>
+                <span class="badge">Qatar VAT Compliance</span>
             </div>
             
             <div class="service-card">
@@ -203,32 +201,30 @@
                 <ul>
                     <li>WPS-compliant payroll</li>
                     <li>SIF file preparation</li>
-                    <li>Bank coordination</li>
-                    <li>Employee benefits</li>
+                    <li>Employee benefits management</li>
                 </ul>
-                <span class="badge badge-primary">Qatar Labor Law</span>
+                <span class="badge">Qatar Labor Law</span>
             </div>
             
             <div class="service-card">
                 <h3>📊 Financial Reporting</h3>
                 <ul>
-                    <li>Monthly statements</li>
+                    <li>Monthly and quarterly statements</li>
+                    <li>Cash flow analysis</li>
                     <li>Management reports</li>
-                    <li>Budget analysis</li>
-                    <li>Cash flow forecasts</li>
                 </ul>
-                <span class="badge badge-primary">SME Specialized</span>
+                <span class="badge">SME Specialized</span>
             </div>
             
             <div class="service-card">
                 <h3>🏦 Trade Finance</h3>
                 <ul>
-                    <li>Tender bond preparation</li>
+                    <li>Tender bonds</li>
                     <li>Letters of guarantee</li>
                     <li>Performance guarantees</li>
-                    <li>LC documentation</li>
+                    <li>Documentary letters of credit</li>
                 </ul>
-                <span class="badge badge-primary">QCB Regulations</span>
+                <span class="badge">QCB Regulations</span>
             </div>
         </div>
     </section>
@@ -246,7 +242,8 @@
 
     <footer>
         <p>© <script>document.write(new Date().getFullYear())</script> Abdul Fathah. All rights reserved.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Professional Accounting Services in Doha, Qatar</p>
+        <p>Professional Accounting Services in Doha, Qatar</p>
     </footer>
+
 </body>
 </html>

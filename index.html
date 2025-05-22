@@ -5,7 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CoreBalance Accounting | Accounting in Qatar</title>
   <meta name="description" content="CoreBalance Accounting - Freelance accounting, VAT, payroll and reporting for businesses in Qatar.">
+  <meta name="keywords" content="Accounting in Qatar, Freelance Accountant Doha, Bookkeeping Qatar, VAT Filing Qatar, Payroll WPS Qatar, CoreBalance Accounting Doha, ERP integration accounting Qatar" />
+  <meta property="og:title" content="CoreBalance Accounting | Reliable Accounting Services in Qatar" />
+  <meta property="og:description" content="Expert freelance accounting in Qatar – bookkeeping, WPS payroll, VAT filing, and ERP support for SMEs." />
+  <meta property="og:image" content="https://i.postimg.cc/HkBJrKJ1/DACAF2-F2-73-D4-4195-A25-A-EF22752-F29-F0.png" />
+
+  <!-- Optimized Fonts Loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+
   <style>
     html { scroll-behavior: smooth; }
     body {
@@ -152,6 +161,12 @@
       width: 50px;
       height: 50px;
     }
+    @media (max-width: 600px) {
+      input, textarea, button[type="submit"] {
+        font-size: 1.1rem;
+        padding: 1rem;
+      }
+    }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -228,6 +243,15 @@
   function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
   }
+
+  document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
 </script>
 </body>
 </html>

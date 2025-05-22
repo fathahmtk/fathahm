@@ -6,7 +6,6 @@
   <title>CoreBalance Accounting | Accounting in Qatar</title>
   <meta name="description" content="CoreBalance Accounting - Freelance accounting, VAT, payroll and reporting for businesses in Qatar.">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
-
   <style>
     html { scroll-behavior: smooth; }
     body {
@@ -20,93 +19,40 @@
       background-color: #121212;
       color: #f1f1f1;
     }
-
-    /* Preloader */
-    #preloader {
-      background: #fff;
-      height: 100vh;
-      width: 100%;
-      position: fixed;
-      top: 0; left: 0;
-      z-index: 2000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: opacity 0.5s ease;
-    }
-    .spinner {
-      width: 50px;
-      height: 50px;
-      border: 5px solid #ccc;
-      border-top: 5px solid #730000;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    /* Scroll to Top Button */
-    #scrollTopBtn {
-      display: none;
-      position: fixed;
-      bottom: 90px;
-      right: 20px;
-      z-index: 998;
-      font-size: 1.5rem;
-      border: none;
-      outline: none;
-      background-color: #730000;
-      color: white;
-      cursor: pointer;
-      padding: 10px 15px;
-      border-radius: 50%;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    }
-    #scrollTopBtn:hover {
-      background-color: #a00000;
-    }
-
     header {
       background: linear-gradient(to right, #730000, #a00000);
       color: white;
       padding: 3rem 1rem;
       text-align: center;
-      position: relative;
     }
-
     header img {
-      height: 80px;
+      height: 70px;
       margin-bottom: 1rem;
     }
-
     h1 {
       font-family: 'Merriweather', serif;
       font-size: 2.5rem;
       margin: 0.2rem 0;
     }
-
     .tagline {
       font-size: 1.1rem;
       font-weight: 300;
     }
-
     nav {
       background-color: #222;
       padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 999;
       text-align: center;
     }
-
     nav a {
       color: white;
       margin: 0 20px;
       text-decoration: none;
       font-weight: 500;
     }
-
     nav a:hover { color: #ffcc00; }
-
     .toggle-mode {
       position: fixed;
       top: 20px;
@@ -119,46 +65,6 @@
       cursor: pointer;
       z-index: 1000;
     }
-
-    .menu-toggle {
-      display: none;
-      font-size: 1.5rem;
-      background: none;
-      border: none;
-      color: white;
-      cursor: pointer;
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      z-index: 1001;
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-        flex-direction: column;
-        background: #222;
-        position: absolute;
-        top: 70px;
-        width: 100%;
-        left: 0;
-        padding: 1rem 0;
-      }
-
-      nav.show {
-        display: flex;
-      }
-
-      nav a {
-        margin: 10px 0;
-        font-size: 1.2rem;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-    }
-
     section {
       max-width: 1100px;
       margin: auto;
@@ -167,33 +73,27 @@
       border-bottom: 1px solid #eee;
       animation: fadeIn 1s ease-in-out;
     }
-
     body.dark-mode section {
       background: #1f1f1f;
     }
-
     h2 {
       font-family: 'Merriweather', serif;
       color: #730000;
       border-bottom: 2px solid #eee;
       padding-bottom: 0.4rem;
     }
-
     ul { padding-left: 1.5rem; line-height: 1.8; }
-
     .service-cards {
       display: grid;
       grid-template-columns: 1fr;
       gap: 1.5rem;
       margin-top: 2rem;
     }
-
     @media (min-width: 600px) {
       .service-cards {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       }
     }
-
     .card {
       background-color: #f1f1f1;
       border-radius: 10px;
@@ -202,44 +102,56 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.08);
       transition: transform 0.4s ease;
     }
-
     body.dark-mode .card {
       background-color: #2a2a2a;
     }
-
     .card:hover { transform: translateY(-5px); }
-
     .card img {
       width: 100%;
       height: 180px;
       object-fit: cover;
     }
-
     .card h3 {
       margin: 1rem 0;
       font-size: 1.1rem;
       padding: 0 1rem;
     }
-
+    form {
+      max-width: 500px;
+      margin-top: 2rem;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    button[type="submit"] {
+      background-color: #730000;
+      color: white;
+      border: none;
+      padding: 0.8rem 2rem;
+      border-radius: 25px;
+      cursor: pointer;
+    }
     footer {
       background-color: #222;
       color: white;
       text-align: center;
       padding: 2rem;
     }
-
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
       right: 20px;
       z-index: 999;
     }
-
     .whatsapp-float img {
       width: 50px;
       height: 50px;
     }
-
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -247,100 +159,75 @@
   </style>
 </head>
 <body>
-
-<!-- Preloader -->
-<div id="preloader">
-  <div class="spinner"></div>
-</div>
-
-<!-- Scroll to Top -->
-<button onclick="scrollToTop()" id="scrollTopBtn" title="Back to top">↑</button>
-
-<button class="menu-toggle" onclick="toggleMenu()">☰</button>
 <button class="toggle-mode" onclick="toggleDarkMode()">🌓 Theme</button>
-
 <header>
-  <img src="https://i.imgur.com/YourImageID.png" alt="CoreBalance Accounting Logo">
+  <img src="logo.png" alt="CoreBalance Accounting Logo">
   <h1>CoreBalance Accounting</h1>
   <p class="tagline">Trusted Freelance Accounting Support for Businesses in Qatar</p>
 </header>
-
 <nav>
   <a href="#welcome">Home</a>
   <a href="#services">Services</a>
   <a href="#industries">Industries</a>
   <a href="#contact">Contact</a>
 </nav>
-
 <section id="welcome">
   <h2>Welcome</h2>
-  <p>CoreBalance Accounting provides reliable and cost-effective accounting services tailored for startups, restaurants, groceries, and service providers in Qatar.</p>
+  <p>CoreBalance Accounting provides reliable and cost-effective accounting services tailored for startups, restaurants, groceries, and service providers in Qatar. We handle your books, payroll, VAT records, and reports — so you can focus on running your business with confidence.</p>
 </section>
-
 <section id="services">
   <h2>Our Services</h2>
   <div class="service-cards">
-    <div class="card"><img src="https://img.icons8.com/color/480/book.png" alt=""><h3>Bookkeeping</h3></div>
-    <div class="card"><img src="https://img.icons8.com/color/480/payroll.png" alt=""><h3>WPS Payroll</h3></div>
-    <div class="card"><img src="https://img.icons8.com/color/480/combo-chart.png" alt=""><h3>Financial Reporting</h3></div>
-    <div class="card"><img src="https://img.icons8.com/color/480/tax.png" alt=""><h3>VAT Filing</h3></div>
-    <div class="card"><img src="https://img.icons8.com/color/480/pos-terminal.png" alt=""><h3>POS Integration</h3></div>
+    <div class="card">
+      <img src="https://img.icons8.com/color/480/book.png" alt="Bookkeeping">
+      <h3>Bookkeeping & Records</h3>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/color/480/payroll.png" alt="Payroll">
+      <h3>WPS Payroll Processing</h3>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/color/480/combo-chart.png" alt="Reports">
+      <h3>Financial Reporting</h3>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/color/480/tax.png" alt="VAT">
+      <h3>VAT Records & Filing</h3>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/color/480/pos-terminal.png" alt="POS Integration">
+      <h3>POS & ERP Integration</h3>
+    </div>
   </div>
 </section>
-
 <section id="industries">
   <h2>Industries We Serve</h2>
   <ul>
     <li>Restaurants & Cafeterias</li>
     <li>Retail & Grocery Stores</li>
-    <li>Clinics & Freelancers</li>
-    <li>Online Traders</li>
+    <li>Clinics, Salons & Freelancers</li>
+    <li>Online & Trading Businesses</li>
   </ul>
 </section>
-
 <section id="contact">
   <h2>Contact Us</h2>
-  <p>Have questions or need support?</p>
-  <p>
-    <a href="https://wa.me/97474464994?text=Hello%2C%20I%27m%20interested%20in%20your%20accounting%20services." target="_blank">
-      <strong>Message Us on WhatsApp</strong>
-    </a>
-  </p>
+  <form action="https://formspree.io/f/mwkdnjry" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
 </section>
-
 <footer>
   &copy; <script>document.write(new Date().getFullYear())</script> CoreBalance Accounting – Doha, Qatar. All rights reserved.
 </footer>
-
-<a href="https://wa.me/97474464994?text=Hello%2C%20I%27m%20interested%20in%20your%20accounting%20services." class="whatsapp-float" target="_blank">
+<a href="https://wa.me/97474464994" class="whatsapp-float" target="_blank">
   <img src="https://img.icons8.com/color/96/whatsapp.png" alt="WhatsApp Chat">
 </a>
-
 <script>
   function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
   }
-
-  function toggleMenu() {
-    const nav = document.querySelector('nav');
-    nav.classList.toggle('show');
-  }
-
-  window.addEventListener('load', function () {
-    const preloader = document.getElementById('preloader');
-    preloader.style.opacity = '0';
-    setTimeout(() => preloader.style.display = 'none', 500);
-  });
-
-  // Scroll to top button
-  window.onscroll = function () {
-    document.getElementById("scrollTopBtn").style.display = 
-      (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) ? "block" : "none";
-  };
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
 </script>
-
 </body>
 </html>

@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CoreBalance Accounting | Abdul Fathah | Doha, Qatar</title>
-  <meta name="description" content="Professional freelance accounting services in Doha, Qatar. Bookkeeping, payroll, VAT-ready, Zoho Books and POS integration." />
+  <title>CoreBalance Accounting | Accounting in Qatar</title>
+  <meta name="description" content="CoreBalance Accounting - Freelance accounting, VAT, payroll and reporting for businesses in Qatar.">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
@@ -14,13 +17,14 @@
       color: #333;
     }
     header {
-      background-color: #730000;
+      background: linear-gradient(to right, #730000, #a00000);
       color: white;
-      padding: 2rem 1rem;
+      padding: 3rem 1rem;
       text-align: center;
+      position: relative;
     }
     header img {
-      height: 80px;
+      height: 70px;
       margin-bottom: 1rem;
     }
     h1 {
@@ -29,39 +33,40 @@
       margin: 0.2rem 0;
     }
     .tagline {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 300;
     }
     nav {
-      background: #333;
+      background-color: #222;
       padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 999;
       text-align: center;
     }
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0 20px;
       text-decoration: none;
       font-weight: 500;
+      transition: color 0.3s ease;
     }
     nav a:hover {
-      text-decoration: underline;
-    }
-    main {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 1rem 2rem;
-      background: white;
-      border: 1px solid #ddd;
+      color: #ffcc00;
     }
     section {
-      margin-bottom: 2rem;
+      max-width: 1000px;
+      margin: auto;
+      padding: 4rem 2rem;
+      background: white;
+      border-bottom: 1px solid #eee;
+      animation: fadeIn 1s ease-in-out;
     }
     h2 {
       font-family: 'Merriweather', serif;
-      font-size: 1.6rem;
       color: #730000;
       border-bottom: 2px solid #eee;
-      padding-bottom: 0.5rem;
+      padding-bottom: 0.4rem;
     }
     ul {
       padding-left: 1.5rem;
@@ -71,65 +76,64 @@
       background-color: #222;
       color: white;
       text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-      margin-top: 3rem;
+      padding: 2rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <!-- Replace this link with your direct logo link from imgur -->
   <img src="https://i.imgur.com/k2MMeMQ.png" alt="CoreBalance Accounting Logo">
   <h1>CoreBalance Accounting</h1>
-  <p class="tagline">Professional Freelance Accounting Services in Qatar</p>
+  <p class="tagline">Trusted Freelance Accounting Support for Businesses in Qatar</p>
 </header>
 
 <nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="services.html">Services</a>
-  <a href="pricing.html">Pricing</a>
-  <a href="contact.html">Contact</a>
+  <a href="#welcome">Home</a>
+  <a href="#services">Services</a>
+  <a href="#industries">Industries</a>
+  <a href="#contact">Contact</a>
 </nav>
 
-<main>
-  <section>
-    <h2>Welcome</h2>
-    <p>I'm Abdul Fathah, a freelance accountant based in Doha. I help small businesses simplify their finances, stay WPS and VAT-compliant, and save costs — all without hiring a full-time accountant.</p>
-  </section>
+<section id="welcome">
+  <h2>Welcome</h2>
+  <p>CoreBalance Accounting provides reliable and cost-effective accounting services tailored for startups, restaurants, groceries, and service providers in Qatar. We handle your books, payroll, VAT records, and reports — so you can focus on running your business with confidence.</p>
+</section>
 
-  <section>
-    <h2>Key Services</h2>
-    <ul>
-      <li>Daily bookkeeping & financial records</li>
-      <li>WPS Payroll processing & SIF files</li>
-      <li>Zoho Books & POS integration (SellerBix, Xynosoft)</li>
-      <li>VAT-ready entries and compliance tracking</li>
-      <li>Financial reporting, audit preparation, and tax support</li>
-    </ul>
-  </section>
+<section id="services">
+  <h2>Our Services</h2>
+  <ul>
+    <li>Daily bookkeeping & financial records</li>
+    <li>WPS Payroll processing & SIF files</li>
+    <li>Zoho Books & POS integration (SellerBix, Xynosoft)</li>
+    <li>VAT-ready entries and compliance tracking</li>
+    <li>Financial reporting, audit preparation, and tax support</li>
+  </ul>
+</section>
 
-  <section>
-    <h2>Industries Served</h2>
-    <ul>
-      <li>Restaurants & Cafeterias</li>
-      <li>Retail & Grocery Stores</li>
-      <li>Clinics, Salons & Freelancers</li>
-      <li>Online & Trading Businesses</li>
-    </ul>
-  </section>
+<section id="industries">
+  <h2>Industries We Serve</h2>
+  <ul>
+    <li>Restaurants & Cafeterias</li>
+    <li>Retail & Grocery Stores</li>
+    <li>Clinics, Salons & Freelancers</li>
+    <li>Online & Trading Businesses</li>
+  </ul>
+</section>
 
-  <section>
-    <h2>Get in Touch</h2>
-    <p>Call or WhatsApp: <strong>+974 7446 4994</strong></p>
-    <p>Email: <a href="mailto:abdulfathahmtk@gmail.com">abdulfathahmtk@gmail.com</a></p>
-  </section>
-</main>
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Call or WhatsApp: <strong>+974 7446 4994</strong></p>
+  <p>Email: <a href="mailto:abdulfathahmtk@gmail.com">abdulfathahmtk@gmail.com</a></p>
+</section>
 
 <footer>
-  &copy; <script>document.write(new Date().getFullYear())</script> CoreBalance Accounting – Abdul Fathah, Doha, Qatar. All rights reserved.
+  &copy; <script>document.write(new Date().getFullYear())</script> CoreBalance Accounting – Doha, Qatar. All rights reserved.
 </footer>
 
 </body>

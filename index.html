@@ -21,7 +21,7 @@
       color: #f1f1f1;
     }
 
-    /* Preloader Styles */
+    /* Preloader */
     #preloader {
       background: #fff;
       height: 100vh;
@@ -45,6 +45,27 @@
     @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
+    }
+
+    /* Scroll to Top Button */
+    #scrollTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      z-index: 998;
+      font-size: 1.5rem;
+      border: none;
+      outline: none;
+      background-color: #730000;
+      color: white;
+      cursor: pointer;
+      padding: 10px 15px;
+      border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+    #scrollTopBtn:hover {
+      background-color: #a00000;
     }
 
     header {
@@ -200,29 +221,6 @@
       padding: 0 1rem;
     }
 
-    form {
-      max-width: 500px;
-      margin-top: 2rem;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 0.8rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
-
-    button[type="submit"] {
-      background-color: #730000;
-      color: white;
-      border: none;
-      padding: 0.8rem 2rem;
-      border-radius: 25px;
-      cursor: pointer;
-    }
-
     footer {
       background-color: #222;
       color: white;
@@ -254,6 +252,9 @@
 <div id="preloader">
   <div class="spinner"></div>
 </div>
+
+<!-- Scroll to Top -->
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Back to top">↑</button>
 
 <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 <button class="toggle-mode" onclick="toggleDarkMode()">🌓 Theme</button>
@@ -299,19 +300,19 @@
 
 <section id="contact">
   <h2>Contact Us</h2>
-  <form action="https://formspree.io/f/mwkdnjry" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+  <p>Have questions or need support?</p>
+  <p>
+    <a href="https://wa.me/97474464994?text=Hello%2C%20I%27m%20interested%20in%20your%20accounting%20services." target="_blank">
+      <strong>Message Us on WhatsApp</strong>
+    </a>
+  </p>
 </section>
 
 <footer>
   &copy; <script>document.write(new Date().getFullYear())</script> CoreBalance Accounting – Doha, Qatar. All rights reserved.
 </footer>
 
-<a href="https://wa.me/97474464994" class="whatsapp-float" target="_blank">
+<a href="https://wa.me/97474464994?text=Hello%2C%20I%27m%20interested%20in%20your%20accounting%20services." class="whatsapp-float" target="_blank">
   <img src="https://img.icons8.com/color/96/whatsapp.png" alt="WhatsApp Chat">
 </a>
 
@@ -330,6 +331,15 @@
     preloader.style.opacity = '0';
     setTimeout(() => preloader.style.display = 'none', 500);
   });
+
+  // Scroll to top button
+  window.onscroll = function () {
+    document.getElementById("scrollTopBtn").style.display = 
+      (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) ? "block" : "none";
+  };
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 </script>
 
 </body>

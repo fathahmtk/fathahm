@@ -1,309 +1,49 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CoreBalance Accounting | Accounting in Qatar</title>
-  <meta name="description" content="CoreBalance Accounting - Freelance accounting, VAT, payroll and reporting for businesses in Qatar.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #002147; /* Navy Blue */
-      --accent: #FFD700;  /* Golden */
-      --light: #ffffff;
-      --dark: #121212;
-    }
-
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      background-color: var(--light);
-      color: var(--primary);
-      transition: background 0.4s, color 0.4s;
-    }
-
-    body.dark-mode {
-      background-color: var(--dark);
-      color: var(--light);
-    }
-
-    header {
-      background: var(--primary);
-      color: var(--light);
-      padding: 3rem 1rem;
-      text-align: center;
-    }
-
-    header img {
-      height: 70px;
-      margin-bottom: 1rem;
-    }
-
-    h1 {
-      font-family: 'Merriweather', serif;
-      font-size: 2.5rem;
-      margin: 0.2rem 0;
-    }
-
-    .tagline {
-      font-size: 1.1rem;
-      font-weight: 300;
-      color: var(--accent);
-    }
-
-    nav {
-      background-color: var(--primary);
-      padding: 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      text-align: center;
-    }
-
-    nav a {
-      color: var(--light);
-      margin: 0 20px;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: var(--accent);
-    }
-
-    .toggle-mode {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: var(--primary);
-      color: var(--light);
-      border: none;
-      border-radius: 30px;
-      padding: 10px 15px;
-      cursor: pointer;
-      z-index: 1000;
-    }
-
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 4rem 1rem;
-      background: var(--light);
-      border-bottom: 1px solid #ddd;
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    body.dark-mode section {
-      background: #1f1f1f;
-    }
-
-    h2 {
-      font-family: 'Merriweather', serif;
-      color: var(--primary);
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 0.4rem;
-    }
-    body.dark-mode h2 {
-      color: var(--accent);
-      border-bottom: 2px solid var(--accent);
-    }
-
-    ul {
-      padding-left: 1.5rem;
-      line-height: 1.8;
-    }
-
-    .service-cards {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    @media (min-width: 600px) {
-      .service-cards {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      }
-    }
-
-    .card {
-      background-color: #fdfdfd;
-      border: 2px solid var(--accent);
-      border-radius: 10px;
-      overflow: hidden;
-      text-align: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease;
-      color: var(--primary);
-    }
-
-    body.dark-mode .card {
-      background-color: #2a2a2a;
-      color: var(--accent);
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .card h3 {
-      margin: 1rem 0;
-      font-size: 1.1rem;
-      color: var(--primary);
-    }
-    body.dark-mode .card h3 {
-      color: var(--accent);
-    }
-
-    form {
-      max-width: 500px;
-      margin-top: 2rem;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 0.8rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
-
-    button[type="submit"] {
-      background-color: var(--accent);
-      color: var(--primary);
-      font-weight: bold;
-      border: none;
-      padding: 0.8rem 2rem;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    button[type="submit"]:hover {
-      background-color: #ffe066;
-      color: var(--primary);
-    }
-
-    footer {
-      background-color: var(--primary);
-      color: var(--light);
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 999;
-    }
-
-    .whatsapp-float img {
-      width: 50px;
-      height: 50px;
-    }
-
-    @media (max-width: 600px) {
-      input, textarea, button[type="submit"] {
-        font-size: 1.1rem;
-        padding: 1rem;
-      }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CoreBalance Accounting | Qatar</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
 </head>
 <body>
-<button class="toggle-mode" onclick="toggleDarkMode()">🌓 Theme</button>
-<header>
-  <img src="https://i.postimg.cc/HkBJrKJ1/DACAF2-F2-73-D4-4195-A25-A-EF22752-F29-F0.png" alt="CoreBalance Accounting Logo">
+<header class="hero" data-aos="fade-down">
+  <img src="assets/logo.png" alt="CoreBalance Logo" class="logo"/>
   <h1>CoreBalance Accounting</h1>
-  <p class="tagline">Trusted Financial Partner in Qatar</p>
+  <p>Balancing Books, Building Trust</p>
+  <a href="https://wa.me/97474464994" class="cta">📞 WhatsApp Us</a>
 </header>
-<nav>
-  <a href="#welcome">Home</a>
-  <a href="#services">Services</a>
-  <a href="#industries">Industries</a>
-  <a href="#contact">Contact</a>
-</nav>
-<section id="welcome">
-  <h2>Welcome</h2>
-  <p>CoreBalance Accounting provides reliable and cost-effective accounting services tailored for startups, restaurants, groceries, and service providers in Qatar. We handle your books, payroll, VAT records, and reports — so you can focus on running your business with confidence.</p>
+
+<section class="about" data-aos="fade-up">
+  <h2>About Us</h2>
+  <p>We offer expert bookkeeping, VAT, payroll, and ERP support for businesses in Qatar. Our service is trusted, accurate, and fully compliant.</p>
 </section>
-<section id="services">
+
+<section class="services" data-aos="fade-up">
   <h2>Our Services</h2>
-  <div class="service-cards">
-    <div class="card">
-      <img src="https://img.icons8.com/color/480/book.png" alt="Bookkeeping">
-      <h3>Bookkeeping & Records</h3>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/color/480/payroll.png" alt="Payroll">
-      <h3>WPS Payroll Processing</h3>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/color/480/combo-chart.png" alt="Reports">
-      <h3>Financial Reporting</h3>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/color/480/tax.png" alt="VAT">
-      <h3>VAT Records & Filing</h3>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/color/480/pos-terminal.png" alt="POS Integration">
-      <h3>POS & ERP Integration</h3>
-    </div>
+  <div class="grid">
+    <div class="card">📘 Bookkeeping</div>
+    <div class="card">💳 Payroll (WPS)</div>
+    <div class="card">🧾 VAT Filing</div>
+    <div class="card">📊 ERP Integration</div>
+    <div class="card">📈 Financial Reporting</div>
+    <div class="card">💼 Business Setup Help</div>
   </div>
 </section>
-<section id="industries">
-  <h2>Industries We Serve</h2>
-  <ul>
-    <li>Restaurants & Cafeterias</li>
-    <li>Retail & Grocery Stores</li>
-    <li>Clinics, Salons & Freelancers</li>
-    <li>Online & Trading Businesses</li>
-  </ul>
-</section>
-<section id="contact">
+
+<section class="contact" data-aos="fade-up">
   <h2>Contact Us</h2>
-  <form action="https://formspree.io/f/mwkdnjry" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+  <p>Reach out for consultation, pricing or any service inquiries.</p>
+  <a href="mailto:corebalance.qa@gmail.com" class="cta">📧 Email Us</a>
 </section>
+
 <footer>
-  &copy; <script>document.write(new Date().getFullYear())</script> CoreBalance Accounting – Doha, Qatar. All rights reserved.
+  <p>&copy; 2025 CoreBalance Accounting – Doha, Qatar</p>
 </footer>
-<a href="https://wa.me/97474464994" class="whatsapp-float" target="_blank">
-  <img src="https://img.icons8.com/color/96/whatsapp.png" alt="WhatsApp Chat">
-</a>
-<script>
-  function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
-  }
-  document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
-</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
 </body>
 </html>
